@@ -1,0 +1,1387 @@
+<?xml version="1.0"?>
+<world>
+   <statistics>
+      <dimensions rigid="false" aspect="none">
+         <width>
+            <min>600</min>
+            <max>700</max>
+         </width>
+         <height>
+            <min>600</min>
+            <max>700</max>
+         </height>
+      </dimensions>
+      
+      <terrain-types>
+         <terrain>
+            <name>grassland</name>
+            <climate>
+               <temperature>0.5</temperature>
+               <humidity>0.5</humidity>
+            </climate>
+            <color>
+               <red>0.15</red>
+               <green>0.78</green>
+               <blue>0.31</blue>
+            </color>
+         </terrain>
+         <terrain>
+            <name>plains</name>
+            <climate>
+               <temperature>0.5</temperature>
+               <humidity>0.2</humidity>
+            </climate>
+            <color>
+               <red>0.59</red>
+               <green>0.59</green>
+               <blue>0.35</blue>
+            </color>
+         </terrain>
+         <terrain>
+            <name>forest</name>
+            <climate>
+               <temperature>0.5</temperature>
+               <humidity>0.8</humidity>
+            </climate>
+            <color>
+               <red>0.0</red>
+               <green>0.23</green>
+               <blue>0.01</blue>
+            </color>
+         </terrain>
+         <terrain>
+            <name>desert</name>
+            <climate>
+               <temperature>0.8</temperature>
+               <humidity>0.5</humidity>
+            </climate>
+            <color>
+               <red>1.0</red>
+               <green>1.0</green>
+               <blue>0.4</blue>
+            </color>
+         </terrain>
+         <terrain>
+            <name>snow</name>
+            <climate>
+               <temperature>0.2</temperature>
+               <humidity>0.5</humidity>
+            </climate>
+            <color>
+               <red>0.75</red>
+               <green>0.75</green>
+               <blue>1.0</blue>
+            </color>
+         </terrain>
+      </terrain-types>
+
+      <climate>
+         <temperature>0.5</temperature>
+         <humidity>0.5</humidity>
+      </climate>
+   </statistics>
+
+   <nodes>
+      <continent key="n_continent_0001">
+         <!-- Northern Continent -->
+         
+         <statistics>
+            <dimensions rigid="false" aspect="none">
+               <width>
+                  <min>260</min>
+                  <max>320</max>
+               </width>
+               <height>
+                  <min>250</min>
+                  <max>280</max>
+               </height>
+            </dimensions>
+         </statistics>
+         
+         <nodes>
+            
+            <field key="n_field_0001">
+               <!-- Narshe/Figaro -->
+               <statistics>
+                  <!-- aspect can be "thin" (rectangular), "fat" (square), or "none" (no restrict)-->
+                  <dimensions rigid="false" aspect="thin">
+                     <width>
+                        <!-- use value tag otherwise?-->
+                        <min>45</min>
+                        <max>55</max>
+                     </width>
+                     <height>
+                        <min>60</min>
+                        <max>70</max>
+                     </height>
+                     <!-- Area is optional 
+                     <area>
+                        <min>10000</min>
+                        <max>1000000</max>
+                     </area>-->
+                  </dimensions>
+                  <!-- List "unwalkable" special, aside from mountain, water
+                  <restricted-types>
+                     <type>desert</type>
+                  </restricted-types>-->
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0001">
+                     <name>Narshe</name>
+                     <climate>
+                        <temperature>0.25</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <!-- R = random, NSEW = cardinal, A = all, overwritten by previous -->
+                        <!-- mountain, water, or landfill -->
+                        <R>mountain</R>
+                        <A>landfill</A>               
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0002">
+                     <name>Figaro Castle</name>
+                     <climate>
+                        <temperature>0.75</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <!-- No physical-seeds indicates all landfill-->
+                  </poi>
+                  <poi key="n_poi_0003">
+                     <name>Cave of Figaro</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <R>mountain</R>
+                        <A>landfill</A>               
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0004">
+                     <name>Extra Plains</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.3</humidity>
+                     </climate>
+                  </poi>
+                  <poi key="n_poi_0005">
+                     <name>Extra Forest</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.7</humidity>
+                     </climate>
+                  </poi>
+                  <poi key="n_poi_0006">
+                     <name>Extra Water</name>
+                     <terrain>water</terrain>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0001">
+                     <typed>True</typed>
+                     <first>n_poi_0001</first>
+                     <second>n_poi_0004</second>
+                     <dimensions>
+                        <min>18</min>
+                        <max>20</max>
+                     </dimensions>
+                     <sections>2</sections>
+                  </r>
+                  <r key="r_poi_0002">
+                     <typed>True</typed>
+                     <first>n_poi_0004</first>
+                     <second>n_poi_0005</second>
+                     <dimensions>
+                        <min>12</min>
+                        <max>14</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0003">
+                     <typed>True</typed>
+                     <first>n_poi_0005</first>
+                     <second>n_poi_0002</second>
+                     <dimensions>
+                        <min>17</min>
+                        <max>18</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0004">
+                     <typed>False</typed>
+                     <first>n_poi_0001</first>
+                     <second>n_poi_0002</second>
+                     <dimensions>
+                        <min>50</min>
+                        <max>70</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0005">
+                     <typed>True</typed>
+                     <first>n_poi_0002</first>
+                     <second>n_poi_0003</second>
+                     <dimensions>
+                        <min>10</min>
+                        <max>15</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0006">
+                     <typed>True</typed>
+                     <first>n_poi_0001</first>
+                     <second>n_poi_0006</second>
+                     <dimensions>
+                        <min>3</min>
+                        <max>4</max>
+                     </dimensions>
+                  </r>
+               </restrictions>
+            </field>
+               
+            <field key="n_field_0002">
+               <!-- South Figaro -->
+               <statistics>
+                  <dimensions rigid="false" aspect="none">
+                     <width>
+                        <min>30</min>
+                        <max>35</max>
+                     </width>
+                     <height>
+                        <min>25</min>
+                        <max>31</max>
+                     </height>
+                  </dimensions>
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0007">
+                     <name>Cave of Figaro</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0008">
+                     <name>South Figaro</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>water</R>
+                        <A>landfill</A>               
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0009">
+                     <name>Sabin's Cabin</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.3</humidity>
+                     </climate>
+                  </poi>
+                  <poi key="n_poi_0010">
+                     <name>Mt. Kolts</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <R>mountain</R>
+                        <A>landfill</A>               
+                     </physical-seeds>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0007">
+                     <typed>True</typed>
+                     <first>n_poi_0007</first>
+                     <second>n_poi_0008</second>
+                     <dimensions>
+                        <min>11</min>
+                        <max>14</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0008">
+                     <typed>True</typed>
+                     <first>n_poi_0008</first>
+                     <second>n_poi_0009</second>
+                     <dimensions>
+                        <min>11</min>
+                        <max>12</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0009">
+                     <typed>True</typed>
+                     <first>n_poi_0008</first>
+                     <second>n_poi_0010</second>
+                     <dimensions>
+                        <min>17</min>
+                        <max>20</max>
+                     </dimensions>
+                  </r>
+               </restrictions>
+            </field>
+            
+            <field key="n_field_0003">
+               <!-- Returners Hideout -->
+               <statistics>
+                  <dimensions rigid="false" aspect="thin">
+                     <width>
+                        <min>8</min>
+                        <max>15</max>
+                     </width>
+                     <height>
+                        <min>44</min>
+                        <max>49</max>
+                     </height>
+                  </dimensions>
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0011">
+                     <name>Mt. Kolts</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.3</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <R>mountain</R>
+                        <A>landfill</A>               
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0012">
+                     <name>Returner's Hideout</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.3</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <R>mountain</R>
+                        <A>landfill</A>               
+                     </physical-seeds>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0010">
+                     <typed>True</typed>
+                     <first>n_poi_0011</first>
+                     <second>n_poi_0012</second>
+                     <dimensions>
+                        <min>27</min>
+                        <max>30</max>
+                     </dimensions>
+                  </r>
+               </restrictions>
+            </field>
+            
+            <field key="n_field_0004">
+               <!-- Figaro, Zozo, etc -->
+               <statistics>
+                  <dimensions rigid="false" aspect="none">
+                     <width>
+                        <min>50</min>
+                        <max>55</max>
+                     </width>
+                     <height>
+                        <min>150</min>
+                        <max>160</max>
+                     </height>
+                  </dimensions>
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0013">
+                     <name>Colosseum House</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                  </poi>
+                  <poi key="n_poi_0014">
+                     <name>Kohlingen</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                  </poi>
+                  <poi key="n_poi_0015">
+                     <name>Figaro Castle</name>
+                     <climate>
+                        <temperature>0.75</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                  </poi>
+                  <poi key="n_poi_0016">
+                     <name>Jidoor</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>water</R>
+                        <A>landfill</A>               
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0017">
+                     <name>Zozo</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <R>mountain</R>
+                        <A>landfill</A>               
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0018">
+                     <name>Opera House</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0011">
+                     <typed>True</typed>
+                     <first>n_poi_0013</first>
+                     <second>n_poi_0014</second>
+                     <dimensions>
+                        <min>27</min>
+                        <max>32</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0012">
+                     <typed>True</typed>
+                     <first>n_poi_0014</first>
+                     <second>n_poi_0015</second>
+                     <dimensions>
+                        <min>6</min>
+                        <max>9</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0013">
+                     <typed>True</typed>
+                     <first>n_poi_0014</first>
+                     <second>n_poi_0016</second>
+                     <dimensions>
+                        <min>87</min>
+                        <max>91</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0014">
+                     <typed>True</typed>
+                     <first>n_poi_0016</first>
+                     <second>n_poi_0017</second>
+                     <dimensions>
+                        <min>36</min>
+                        <max>40</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0015">
+                     <typed>false</typed>
+                     <first>n_poi_0014</first>
+                     <second>n_poi_0017</second>
+                     <dimensions>
+                        <min>40</min>
+                        <max>50</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0016">
+                     <typed>True</typed>
+                     <first>n_poi_0016</first>
+                     <second>n_poi_0018</second>
+                     <dimensions>
+                        <min>28</min>
+                        <max>33</max>
+                     </dimensions>
+                  </r>
+               </restrictions>
+            </field>
+            
+            <field key="n_field_0005">
+               <!-- Nikeah -->
+               <statistics>
+                  <dimensions rigid="false" aspect="none">
+                     <width>
+                        <min>95</min>
+                        <max>100</max>
+                     </width>
+                     <height>
+                        <min>45</min>
+                        <max>53</max>
+                     </height>
+                  </dimensions>
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0019">
+                     <name>Nikeah</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>water</R>
+                        <R>water</R>
+                        <A>landfill</A>               
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0020">
+                     <name>Old Man's House</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                  </poi>
+                  <poi key="n_poi_0021">
+                     <name>Empire Camp</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0017">
+                     <typed>True</typed>
+                     <first>n_poi_0019</first>
+                     <second>n_poi_0020</second>
+                     <dimensions>
+                        <min>55</min>
+                        <max>60</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0018">
+                     <typed>True</typed>
+                     <first>n_poi_0020</first>
+                     <second>n_poi_0021</second>
+                     <dimensions>
+                        <min>35</min>
+                        <max>38</max>
+                     </dimensions>
+                  </r>
+               </restrictions>
+            </field>
+            
+            <field key="n_field_0006">
+               <!-- Doma -->
+               <statistics>
+                  <dimensions rigid="false" aspect="none">
+                     <width>
+                        <min>33</min>
+                        <max>35</max>
+                     </width>
+                     <height>
+                        <min>21</min>
+                        <max>23</max>
+                     </height>
+                  </dimensions>
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0023">
+                     <name>Empire Camp</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0024">
+                     <name>Doma Castle</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>water</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0025">
+                     <name>Forest Entrance, A</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.7</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0019">
+                     <typed>True</typed>
+                     <first>n_poi_0023</first>
+                     <second>n_poi_0024</second>
+                     <dimensions>
+                        <min>20</min>
+                        <max>23</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0020">
+                     <typed>True</typed>
+                     <first>n_poi_0023</first>
+                     <second>n_poi_0025</second>
+                     <dimensions>
+                        <min>9</min>
+                        <max>10</max>
+                     </dimensions>
+                  </r>
+               </restrictions>
+            </field>
+            
+            <field key="n_field_0007">
+               <!-- Ghost Forest -->
+               <statistics>
+                  <dimensions rigid="false" aspect="none">
+                     <width>
+                        <min>12</min>
+                        <max>18</max>
+                     </width>
+                     <height>
+                        <min>16</min>
+                        <max>23</max>
+                     </height>
+                  </dimensions>
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0026">
+                     <name>Forest Entrance, A</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.7</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0027">
+                     <name>Forest Entrance, B</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.7</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0021">
+                     <typed>True</typed>
+                     <first>n_poi_0026</first>
+                     <second>n_poi_0027</second>
+                     <dimensions>
+                        <min>8</min>
+                        <max>9</max>
+                     </dimensions>
+                  </r>
+               </restrictions>
+            </field>
+            
+            <field key="n_field_0008">
+               <!-- Baren Falls -->
+               <statistics>
+                  <dimensions rigid="false" aspect="none">
+                     <width>
+                        <min>15</min>
+                        <max>20</max>
+                     </width>
+                     <height>
+                        <min>15</min>
+                        <max>20</max>
+                     </height>
+                  </dimensions>
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0028">
+                     <name>Forest Entrance, B</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.7</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0029">
+                     <name>Baren Falls</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0022">
+                     <typed>True</typed>
+                     <first>n_poi_0028</first>
+                     <second>n_poi_0029</second>
+                     <dimensions>
+                        <min>7</min>
+                        <max>15</max>
+                     </dimensions>
+                  </r>
+               </restrictions>
+            </field>
+            
+            <field key="n_field_0009">
+               <!-- Veldt -->
+               <statistics>
+                  <dimensions rigid="false" aspect="none">
+                     <width>
+                        <min>38</min>
+                        <max>45</max>
+                     </width>
+                     <height>
+                        <min>60</min>
+                        <max>68</max>
+                     </height>
+                  </dimensions>
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0030">
+                     <name>Baren Falls</name>
+                     <terrain>water</terrain>
+                  </poi>
+                  <poi key="n_poi_0031">
+                     <name>Veldt Center</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.3</humidity>
+                     </climate>
+                  </poi>
+                  <poi key="n_poi_0032">
+                     <name>Mobliz</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.3</humidity>
+                     </climate>
+                  </poi>
+                  <poi key="n_poi_0033">
+                     <name>Crescent Mountain</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.3</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0023">
+                     <typed>True</typed>
+                     <first>n_poi_0030</first>
+                     <second>n_poi_0031</second>
+                     <dimensions>
+                        <min>25</min>
+                        <max>28</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0024">
+                     <typed>True</typed>
+                     <first>n_poi_0031</first>
+                     <second>n_poi_0032</second>
+                     <dimensions>
+                        <min>16</min>
+                        <max>20</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0025">
+                     <typed>True</typed>
+                     <first>n_poi_0031</first>
+                     <second>n_poi_0033</second>
+                     <dimensions>
+                        <min>27</min>
+                        <max>30</max>
+                     </dimensions>
+                  </r>
+               </restrictions>
+            </field>
+         </nodes>
+         
+         <restrictions>
+            <r key="r_field_0001">
+               <typed>True</typed>
+               <first>n_field_0001</first>
+               <second>n_field_0002</second>
+               <dimensions>
+                  <min>10</min>
+                  <max>60</max>
+               </dimensions>
+            </r>
+            <r key="r_field_0002">
+               <typed>True</typed>
+               <first>n_field_0002</first>
+               <second>n_field_0003</second>
+               <dimensions>
+                  <min>10</min>
+                  <max>50</max>
+               </dimensions>
+            </r>
+            <r key="r_field_0003">
+               <typed>True</typed>
+               <first>n_field_0001</first>
+               <second>n_field_0004</second>
+               <dimensions>
+                  <min>10</min>
+                  <max>90</max>
+               </dimensions>
+            </r>
+            <r key="r_field_0004">
+               <typed>True</typed>
+               <first>n_field_0003</first>
+               <second>n_field_0005</second>
+               <dimensions>
+                  <min>20</min>
+                  <max>100</max>
+               </dimensions>
+            </r>
+            <r key="r_field_0005">
+               <typed>True</typed>
+               <first>n_field_0005</first>
+               <second>n_field_0001</second>
+               <dimensions>
+                  <min>15</min>
+                  <max>88</max>
+               </dimensions>
+            </r>
+            <r key="r_field_0006">
+               <typed>True</typed>
+               <first>n_field_0005</first>
+               <second>n_field_0006</second>
+               <dimensions>
+                  <min>10</min>
+                  <max>80</max>
+               </dimensions>
+            </r>
+            <r key="r_field_0007">
+               <typed>True</typed>
+               <first>n_field_0006</first>
+               <second>n_field_0007</second>
+               <dimensions>
+                  <min>10</min>
+                  <max>60</max>
+               </dimensions>
+            </r>
+            <r key="r_field_0008">
+               <typed>True</typed>
+               <first>n_field_0007</first>
+               <second>n_field_0008</second>
+               <dimensions>
+                  <min>10</min>
+                  <max>50</max>
+               </dimensions>
+            </r>
+            <r key="r_field_0009">
+               <typed>True</typed>
+               <first>n_field_0008</first>
+               <second>n_field_0009</second>
+               <dimensions>
+                  <min>20</min>
+                  <max>70</max>
+               </dimensions>
+            </r>
+         </restrictions>
+      </continent>
+      
+      <continent key="n_continent_0002">
+         <!-- Magi Warrior Island -->
+         <statistics>
+            <dimensions rigid="false" aspect="none">
+               <width>
+                  <min>25</min>
+                  <max>27</max>
+               </width>
+               <height>
+                  <min>36</min>
+                  <max>38</max>
+               </height>
+            </dimensions>
+         </statistics>
+         
+         <nodes>
+            <field key="n_field_0010">
+               <!-- Only one field -->
+               <statistics>
+                  <dimensions rigid="false" aspect="none">
+                     <width>
+                        <min>25</min>
+                        <max>30</max>
+                     </width>
+                     <height>
+                        <min>36</min>
+                        <max>39</max>
+                     </height>
+                  </dimensions>
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0034">
+                     <name>Thamasa</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                  </poi>
+                  <poi key="n_poi_0035">
+                     <name>Forest</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.7</humidity>
+                     </climate>
+                  </poi>
+                  <poi key="n_poi_0036">
+                     <name>Esper Cave</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0026">
+                     <typed>True</typed>
+                     <first>n_poi_0034</first>
+                     <second>n_poi_0035</second>
+                     <dimensions>
+                        <min>24</min>
+                        <max>27</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0027">
+                     <typed>True</typed>
+                     <first>n_poi_0035</first>
+                     <second>n_poi_0036</second>
+                     <dimensions>
+                        <min>17</min>
+                        <max>19</max>
+                     </dimensions>
+                  </r>
+               </restrictions>
+               
+            </field>
+         </nodes>      
+      </continent>
+
+      <continent key="n_continent_0003">
+         <!-- Southern Continent -->
+         <statistics>
+            <dimensions rigid="false" aspect="none">
+               <width>
+                  <min>170</min>
+                  <max>190</max>
+               </width>
+               <height>
+                  <min>170</min>
+                  <max>200</max>
+               </height>
+            </dimensions>
+         </statistics>
+         
+         <nodes>
+            <field key="n_field_0011">
+               <!-- Main field -->
+               <statistics>
+                  <dimensions rigid="false" aspect="none">
+                     <width>
+                        <min>100</min>
+                        <max>120</max>
+                     </width>
+                     <height>
+                        <min>100</min>
+                        <max>120</max>
+                     </height>
+                  </dimensions>
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0037">
+                     <name>Tzen</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0038">
+                     <name>Vector</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                  </poi>
+                  <poi key="n_poi_0039">
+                     <name>Vector Mountains 1</name>
+                     <terrain>mountain</terrain>
+                  </poi>
+                  <poi key="n_poi_0040">
+                     <name>Vector Mountains 2</name>
+                     <terrain>mountain</terrain>
+                  </poi>
+                  <poi key="n_poi_0041">
+                     <name>Vector Mountains 3</name>
+                     <terrain>mountain</terrain>
+                  </poi>
+                  <poi key="n_poi_0042">
+                     <name>Maranda</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                  </poi>
+                  <poi key="n_poi_0043">
+                     <name>Albrook</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>water</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0044">
+                     <name>Imperial Base</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0045">
+                     <name>Chocobo Stable</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.7</humidity>
+                     </climate>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0028">
+                     <typed>True</typed>
+                     <first>n_poi_0037</first>
+                     <second>n_poi_0038</second>
+                     <dimensions>
+                        <min>35</min>
+                        <max>38</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0029">
+                     <typed>True</typed>
+                     <first>n_poi_0038</first>
+                     <second>n_poi_0042</second>
+                     <dimensions>
+                        <min>63</min>
+                        <max>70</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0030">
+                     <typed>True</typed>
+                     <first>n_poi_0038</first>
+                     <second>n_poi_0043</second>
+                     <dimensions>
+                        <min>20</min>
+                        <max>25</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0031">
+                     <typed>True</typed>
+                     <first>n_poi_0043</first>
+                     <second>n_poi_0044</second>
+                     <dimensions>
+                        <min>25</min>
+                        <max>30</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0032">
+                     <typed>false</typed>
+                     <first>n_poi_0038</first>
+                     <second>n_poi_0039</second>
+                     <dimensions>
+                        <min>11</min>
+                        <max>20</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0033">
+                     <typed>false</typed>
+                     <first>n_poi_0038</first>
+                     <second>n_poi_0040</second>
+                     <dimensions>
+                        <min>11</min>
+                        <max>20</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0034">
+                     <typed>false</typed>
+                     <first>n_poi_0038</first>
+                     <second>n_poi_0041</second>
+                     <dimensions>
+                        <min>11</min>
+                        <max>20</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0035">
+                     <typed>false</typed>
+                     <first>n_poi_0039</first>
+                     <second>n_poi_0040</second>
+                     <dimensions>
+                        <min>5</min>
+                        <max>30</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0036">
+                     <typed>false</typed>
+                     <first>n_poi_0040</first>
+                     <second>n_poi_0041</second>
+                     <dimensions>
+                        <min>5</min>
+                        <max>30</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0037">
+                     <typed>false</typed>
+                     <first>n_poi_0041</first>
+                     <second>n_poi_0039</second>
+                     <dimensions>
+                        <min>5</min>
+                        <max>30</max>
+                     </dimensions>
+                  </r>
+                  <r key="r_poi_0038">
+                     <typed>True</typed>
+                     <first>n_poi_0037</first>
+                     <second>n_poi_0045</second>
+                     <dimensions>
+                        <min>4</min>
+                        <max>7</max>
+                     </dimensions>
+                  </r>
+               </restrictions>
+               
+            </field>
+            <field key="n_field_0012">
+               <!-- Esper Field -->
+               <statistics>
+                  <dimensions rigid="false" aspect="none">
+                     <width>
+                        <min>30</min>
+                        <max>32</max>
+                     </width>
+                     <height>
+                        <min>28</min>
+                        <max>35</max>
+                     </height>
+                  </dimensions>
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0045">
+                     <name>Imperial Base</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+                  <poi key="n_poi_0046">
+                     <name>Sealed Cave</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.5</humidity>
+                     </climate>
+                     <physical-seeds>
+                        <R>mountain</R>
+                        <A>landfill</A>
+                     </physical-seeds>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0039">
+                     <typed>True</typed>
+                     <first>n_poi_0045</first>
+                     <second>n_poi_0046</second>
+                     <dimensions>
+                        <min>2</min>
+                        <max>4</max>
+                     </dimensions>
+                  </r>
+               </restrictions>
+               
+            </field>
+         </nodes>
+         
+         <restrictions>
+            <r key="r_field_0010">
+               <typed>True</typed>
+               <first>n_field_0011</first>
+               <second>n_field_0012</second>
+               <dimensions>
+                  <min>10</min>
+                  <max>20</max>
+               </dimensions>
+            </r>
+         </restrictions>
+         
+      </continent>
+
+      <continent key="n_continent_0004">
+         <!-- Triangle Islandfill -->
+         <statistics>
+            <dimensions rigid="false" aspect="none">
+               <width>
+                  <min>19</min>
+                  <max>20</max>
+               </width>
+               <height>
+                  <min>19</min>
+                  <max>20</max>
+               </height>
+            </dimensions>
+         </statistics>
+         
+         <nodes>
+            <field key="n_field_0013">
+               <!-- Only one field -->
+               <statistics>
+                  <dimensions rigid="false" aspect="none">
+                     <width>
+                        <min>18</min>
+                        <max>19</max>
+                     </width>
+                     <height>
+                        <min>18</min>
+                        <max>19</max>
+                     </height>
+                  </dimensions>
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0047">
+                     <name>Mountains</name>
+                     <terrain>mountain</terrain>
+                  </poi>
+                  <poi key="n_poi_0048">
+                     <name>Forest</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.7</humidity>
+                     </climate>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0040">
+                     <typed>false</typed>
+                     <first>n_poi_0047</first>
+                     <second>n_poi_0048</second>
+                     <dimensions>
+                        <min>5</min>
+                        <max>10</max>
+                     </dimensions>
+                  </r>
+               </restrictions>
+               
+            </field>
+         </nodes>      
+      </continent>      
+   </nodes>   
+
+
+   <restrictions>
+      <r key="r_continent_0001">
+         <typed>False</typed>
+         <first>n_continent_0001</first>
+         <second>n_continent_0002</second>
+         <dimensions>
+            <min>50</min>
+            <max>70</max>
+         </dimensions>
+      </r>
+      <r key="r_continent_0002">
+         <typed>False</typed>
+         <first>n_continent_0001</first>
+         <second>n_continent_0003</second>
+         <dimensions>
+            <min>100</min>
+            <max>400</max>
+         </dimensions>
+      </r>
+      <r key="r_continent_0003">
+         <typed>False</typed>
+         <first>n_continent_0001</first>
+         <second>n_continent_0004</second>
+         <dimensions>
+            <min>50</min>
+            <max>500</max>
+         </dimensions>
+      </r>
+      <r key="r_continent_0004">
+         <typed>False</typed>
+         <first>n_continent_0002</first>
+         <second>n_continent_0003</second>
+         <dimensions>
+            <min>100</min>
+            <max>500</max>
+         </dimensions>
+      </r>
+   </restrictions>
+
+</world>

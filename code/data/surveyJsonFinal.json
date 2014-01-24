@@ -1,0 +1,637 @@
+{
+   "nodes": {
+      "continent0": {
+         "dimensions": {
+            "aspect": "none", 
+            "height": {
+               "max": 80, 
+               "min": 75
+            }, 
+            "rigid": false, 
+            "width": {
+               "max": 80, 
+               "min": 75
+            }
+         }, 
+         "nodes": {
+            "field0": {
+               "dimensions": {
+                  "aspect": "none", 
+                  "height": {
+                     "max": 33, 
+                     "min": 28
+                  }, 
+                  "rigid": false, 
+                  "width": {
+                     "max": 32, 
+                     "min": 29
+                  }
+               }, 
+               "nodes": {
+                  "DesertPalace": {
+                     "climate": {
+                        "humidity": 0.5, 
+                        "temperature": 0.8
+                     }, 
+                     "name": "Desert Palace"
+                  }, 
+                  "DesertTown": {
+                     "climate": {
+                        "humidity": 0.5, 
+                        "temperature": 0.8
+                     }, 
+                     "name": "Desert Town"
+                  }, 
+                  "MountainTown": {
+                     "climate": {
+                        "humidity": 0.5, 
+                        "temperature": 0.5
+                     }, 
+                     "name": "Mountain Town", 
+                     "physical-seeds": {
+                        "A": "landfill", 
+                        "R": [
+                           "mountain", 
+                           "mountain"
+                        ]
+                     }
+                  }, 
+                  "PlainsVillage": {
+                     "climate": {
+                        "humidity": 0.2, 
+                        "temperature": 0.5
+                     }, 
+                     "name": "Plains Village"
+                  }, 
+                  "StarterTown": {
+                     "climate": {
+                        "humidity": 0.5, 
+                        "temperature": 0.5
+                     }, 
+                     "name": "Starter Town"
+                  }, 
+                  "mountain01": {
+                     "name": "mountain", 
+                     "terrain": "mountain"
+                  }, 
+                  "mountain02": {
+                     "name": "mountain", 
+                     "terrain": "mountain"
+                  }, 
+                  "water01": {
+                     "name": "water01", 
+                     "terrain": "water"
+                  }
+               }, 
+               "restrictions": {
+                  "restrict00": {
+                     "dimensions": {
+                        "max": 11, 
+                        "min": 7
+                     }, 
+                     "first": "StarterTown", 
+                     "second": "DesertTown", 
+                     "typed": true
+                  }, 
+                  "restrict01": {
+                     "dimensions": {
+                        "max": 5, 
+                        "min": 3
+                     }, 
+                     "first": "DesertTown", 
+                     "second": "DesertPalace", 
+                     "typed": true
+                  }, 
+                  "restrict010": {
+                     "dimensions": {
+                        "max": 18, 
+                        "min": 15
+                     }, 
+                     "first": "MountainTown", 
+                     "second": "DesertPalace", 
+                     "typed": false
+                  }, 
+                  "restrict02": {
+                     "dimensions": {
+                        "max": 16, 
+                        "min": 13
+                     }, 
+                     "first": "DesertTown", 
+                     "second": "MountainTown", 
+                     "typed": true
+                  }, 
+                  "restrict03": {
+                     "dimensions": {
+                        "max": 7, 
+                        "min": 5
+                     }, 
+                     "first": "MountainTown", 
+                     "second": "PlainsVillage", 
+                     "typed": true
+                  }, 
+                  "restrict04": {
+                     "dimensions": {
+                        "max": 33, 
+                        "min": 30
+                     }, 
+                     "first": "StarterTown", 
+                     "second": "PlainsVillage", 
+                     "typed": false
+                  }, 
+                  "restrict05": {
+                     "dimensions": {
+                        "max": 3, 
+                        "min": 2
+                     }, 
+                     "first": "MountainTown", 
+                     "second": "mountain01", 
+                     "typed": false
+                  }, 
+                  "restrict06": {
+                     "dimensions": {
+                        "max": 3, 
+                        "min": 2
+                     }, 
+                     "first": "MountainTown", 
+                     "second": "mountain02", 
+                     "typed": false
+                  }, 
+                  "restrict07": {
+                     "dimensions": {
+                        "max": 3, 
+                        "min": 2
+                     }, 
+                     "first": "mountain01", 
+                     "second": "mountain02", 
+                     "typed": false
+                  }, 
+                  "restrict08": {
+                     "dimensions": {
+                        "max": 15, 
+                        "min": 13
+                     }, 
+                     "first": "StarterTown", 
+                     "second": "DesertPalace", 
+                     "typed": false
+                  }, 
+                  "restrict09": {
+                     "dimensions": {
+                        "max": 6, 
+                        "min": 4
+                     }, 
+                     "first": "water01", 
+                     "second": "DesertPalace", 
+                     "typed": false
+                  }
+               }
+            }, 
+            "field1": {
+               "dimensions": {
+                  "aspect": "none", 
+                  "height": {
+                     "max": 38, 
+                     "min": 33
+                  }, 
+                  "rigid": false, 
+                  "width": {
+                     "max": 37, 
+                     "min": 28
+                  }
+               }, 
+               "nodes": {
+                  "ForestVillage": {
+                     "climate": {
+                        "humidity": 0.8, 
+                        "temperature": 0.5
+                     }, 
+                     "name": "ForestVillage"
+                  }, 
+                  "MasterSword": {
+                     "climate": {
+                        "humidity": 0.8, 
+                        "temperature": 0.5
+                     }, 
+                     "name": "Master Sword"
+                  }, 
+                  "MountainCave": {
+                     "climate": {
+                        "humidity": 0.5, 
+                        "temperature": 0.2
+                     }, 
+                     "name": "Mountain Cave", 
+                     "physical-seeds": {
+                        "A": "landfill", 
+                        "R": [
+                           "mountain", 
+                           "mountain"
+                        ]
+                     }
+                  }, 
+                  "PortTown": {
+                     "climate": {
+                        "humidity": 0.5, 
+                        "temperature": 0.5
+                     }, 
+                     "name": "Port Town", 
+                     "physical-seeds": {
+                        "A": "landfill", 
+                        "R": [
+                           "water", 
+                           "water"
+                        ]
+                     }
+                  }, 
+                  "SnowyVillage": {
+                     "climate": {
+                        "humidity": 0.5, 
+                        "temperature": 0.2
+                     }, 
+                     "name": "Snowy Village"
+                  }, 
+                  "ThiefHideout": {
+                     "climate": {
+                        "humidity": 0.8, 
+                        "temperature": 0.5
+                     }, 
+                     "name": "Thief Hideout"
+                  }, 
+                  "mountain03": {
+                     "name": "mountain", 
+                     "terrain": "mountain"
+                  }, 
+                  "water10": {
+                     "name": "water10", 
+                     "terrain": "water"
+                  }
+               }, 
+               "restrictions": {
+                  "restrict10": {
+                     "dimensions": {
+                        "max": 5, 
+                        "min": 3
+                     }, 
+                     "first": "MountainCave", 
+                     "second": "SnowyVillage", 
+                     "typed": true
+                  }, 
+                  "restrict11": {
+                     "dimensions": {
+                        "max": 12, 
+                        "min": 7
+                     }, 
+                     "first": "SnowyVillage", 
+                     "second": "ForestVillage", 
+                     "typed": true
+                  }, 
+                  "restrict110": {
+                     "dimensions": {
+                        "max": 11, 
+                        "min": 10
+                     }, 
+                     "first": "ForestVillage", 
+                     "second": "MasterSword", 
+                     "typed": false
+                  }, 
+                  "restrict12": {
+                     "dimensions": {
+                        "max": 5, 
+                        "min": 3
+                     }, 
+                     "first": "ForestVillage", 
+                     "second": "ThiefHideout", 
+                     "typed": true
+                  }, 
+                  "restrict13": {
+                     "dimensions": {
+                        "max": 10, 
+                        "min": 8
+                     }, 
+                     "first": "ForestVillage", 
+                     "second": "PortTown", 
+                     "typed": true
+                  }, 
+                  "restrict14": {
+                     "dimensions": {
+                        "max": 5, 
+                        "min": 3
+                     }, 
+                     "first": "ThiefHideout", 
+                     "second": "MasterSword", 
+                     "typed": true
+                  }, 
+                  "restrict15": {
+                     "dimensions": {
+                        "max": 27, 
+                        "min": 25
+                     }, 
+                     "first": "MountainCave", 
+                     "second": "ThiefHideout", 
+                     "typed": false
+                  }, 
+                  "restrict16": {
+                     "dimensions": {
+                        "max": 32, 
+                        "min": 27
+                     }, 
+                     "first": "PortTown", 
+                     "second": "ThiefHideout", 
+                     "typed": false
+                  }, 
+                  "restrict17": {
+                     "dimensions": {
+                        "max": 34, 
+                        "min": 29
+                     }, 
+                     "first": "PortTown", 
+                     "second": "MountainCave", 
+                     "typed": false
+                  }, 
+                  "restrict18": {
+                     "dimensions": {
+                        "max": 2, 
+                        "min": 1
+                     }, 
+                     "first": "PortTown", 
+                     "second": "water10", 
+                     "typed": false
+                  }, 
+                  "restrict19": {
+                     "dimensions": {
+                        "max": 3, 
+                        "min": 2
+                     }, 
+                     "first": "MountainCave", 
+                     "second": "mountain03", 
+                     "typed": false
+                  }
+               }
+            }
+         }, 
+         "restrictions": {
+            "restrictC0": {
+               "dimensions": {
+                  "max": 30, 
+                  "min": 10
+               }, 
+               "first": "field0", 
+               "second": "field1", 
+               "typed": true
+            }
+         }
+      }, 
+      "continent1": {
+         "dimensions": {
+            "aspect": "none", 
+            "height": {
+               "max": 23, 
+               "min": 20
+            }, 
+            "rigid": false, 
+            "width": {
+               "max": 28, 
+               "min": 25
+            }
+         }, 
+         "nodes": {
+            "field2": {
+               "dimensions": {
+                  "aspect": "none", 
+                  "height": {
+                     "max": 16, 
+                     "min": 13
+                  }, 
+                  "rigid": false, 
+                  "width": {
+                     "max": 16, 
+                     "min": 14
+                  }
+               }, 
+               "nodes": {
+                  "FishingTown": {
+                     "climate": {
+                        "humidity": 0.2, 
+                        "temperature": 0.5
+                     }, 
+                     "name": "Fishing Town"
+                  }, 
+                  "LakeTemple": {
+                     "climate": {
+                        "humidity": 0.5, 
+                        "temperature": 0.5
+                     }, 
+                     "name": "Lake Temple"
+                  }, 
+                  "forest20": {
+                     "name": "forest20", 
+                     "terrain": "forest"
+                  }, 
+                  "water20": {
+                     "name": "water20", 
+                     "terrain": "water"
+                  }
+               }, 
+               "restrictions": {
+                  "restrict20": {
+                     "dimensions": {
+                        "max": 10, 
+                        "min": 5
+                     }, 
+                     "first": "FishingTown", 
+                     "second": "LakeTemple", 
+                     "typed": true
+                  }, 
+                  "restrict21": {
+                     "dimensions": {
+                        "max": 3, 
+                        "min": 1
+                     }, 
+                     "first": "water20", 
+                     "second": "LakeTemple", 
+                     "typed": false
+                  }, 
+                  "restrict22": {
+                     "dimensions": {
+                        "max": 6, 
+                        "min": 5
+                     }, 
+                     "first": "forest20", 
+                     "second": "LakeTemple", 
+                     "typed": false
+                  }
+               }
+            }
+         }
+      }, 
+      "continent2": {
+         "dimensions": {
+            "aspect": "none", 
+            "height": {
+               "max": 25, 
+               "min": 22
+            }, 
+            "rigid": false, 
+            "width": {
+               "max": 19, 
+               "min": 17
+            }
+         }, 
+         "nodes": {
+            "field4": {
+               "dimensions": {
+                  "aspect": "none", 
+                  "height": {
+                     "max": 13, 
+                     "min": 10
+                  }, 
+                  "rigid": false, 
+                  "width": {
+                     "max": 15, 
+                     "min": 13
+                  }
+               }, 
+               "nodes": {
+                  "FinalPalace": {
+                     "climate": {
+                        "humidity": 0.8, 
+                        "temperature": 0.5
+                     }, 
+                     "name": "FinalPalace"
+                  }, 
+                  "mountain20": {
+                     "name": "mountain20", 
+                     "terrain": "mountain"
+                  }, 
+                  "water20": {
+                     "name": "water20", 
+                     "terrain": "water"
+                  }
+               }, 
+               "restrictions": {
+                  "restrict50": {
+                     "dimensions": {
+                        "max": 5, 
+                        "min": 3
+                     }, 
+                     "first": "FinalPalace", 
+                     "second": "water20", 
+                     "typed": false
+                  }, 
+                  "restrict51": {
+                     "dimensions": {
+                        "max": 3, 
+                        "min": 2
+                     }, 
+                     "first": "FinalPalace", 
+                     "second": "mountain20", 
+                     "typed": false
+                  }, 
+                  "restrict52": {
+                     "dimensions": {
+                        "max": 6, 
+                        "min": 4
+                     }, 
+                     "first": "water20", 
+                     "second": "mountain20", 
+                     "typed": false
+                  }
+               }
+            }
+         }
+      }
+   }, 
+   "restrictions": {
+      "restrictW0": {
+         "dimensions": {
+            "max": 80, 
+            "min": 30
+         }, 
+         "first": "continent0", 
+         "second": "continent1", 
+         "typed": false
+      }, 
+      "restrictW1": {
+         "dimensions": {
+            "max": 100, 
+            "min": 80
+         }, 
+         "first": "continent0", 
+         "second": "continent2", 
+         "typed": false
+      }
+   }, 
+   "statistics": {
+      "climate": {
+         "humidity": 0.5, 
+         "temperature": 0.5
+      }, 
+      "dimensions": {
+         "aspect": "none", 
+         "height": {
+            "max": 130, 
+            "min": 120
+         }, 
+         "rigid": false, 
+         "width": {
+            "max": 130, 
+            "min": 120
+         }
+      }, 
+      "terrain-types": {
+         "desert": {
+            "climate": {
+               "humidity": 0.5, 
+               "temperature": 0.75
+            }, 
+            "color": {
+               "blue": 0.4, 
+               "green": 1.0, 
+               "red": 1.0
+            }
+         }, 
+         "forest": {
+            "climate": {
+               "humidity": 0.75, 
+               "temperature": 0.5
+            }, 
+            "color": {
+               "blue": 0.01, 
+               "green": 0.23, 
+               "red": 0.0
+            }
+         }, 
+         "grassland": {
+            "climate": {
+               "humidity": 0.5, 
+               "temperature": 0.5
+            }, 
+            "color": {
+               "blue": 0.31, 
+               "green": 0.78, 
+               "red": 0.15
+            }
+         }, 
+         "plains": {
+            "climate": {
+               "humidity": 0.25, 
+               "temperature": 0.5
+            }, 
+            "color": {
+               "blue": 0.35, 
+               "green": 0.59, 
+               "red": 0.59
+            }
+         }, 
+         "snow": {
+            "climate": {
+               "humidity": 0.5, 
+               "temperature": 0.25
+            }, 
+            "color": {
+               "blue": 1.0, 
+               "green": 0.75, 
+               "red": 0.75
+            }
+         }
+      }
+   }
+}

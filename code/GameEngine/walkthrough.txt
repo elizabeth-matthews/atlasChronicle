@@ -1,0 +1,56 @@
+Go to StarterTown
+--Tells you about the Three crystals and where the first one is.
+
+Go to DesertTown
+--Hint about Courage Crystal
+--Learn about where the next one is
+----IF Courage crystal in inv
+
+Go to DesertPalace
+--Get Courage Crystal
+
+Go to MountainTown
+--Get told that you need a Key to progress
+--Get told where the key is
+
+Go to LittlePlainsVillage
+--Find Key
+
+Go to MountainTown
+--Key is used to progress
+
+Head out from other MountainCave
+
+Go to SnowyTownByMountains
+--Learn Wisdom Crystal was stolen, thief ran off
+
+Go to ForestVillage
+--Find out thief is hiding nearby.
+--Hear next way is through Tunnel.
+----IF Wisdom crystal
+
+Go to TheifHideout
+--Get Wisdom Crystal
+--Vague hint there could be more to learn here
+----IF all crystals
+----Hear hint about master sword
+
+Go to Port Town
+--Travel To FishingTown
+
+Go To FishingTown
+--Get told about Power Crystal
+--Get told where the final temple is.
+----IF all crystals
+
+Go to LakeShore
+--Get Power Crystal
+
+Go back through Port Town
+
+Go to Temple
+--Win :D
+
+Extras: master sword
+--Random NPC in ThiefHideout tells you how to find one?
+----X steps n/s X steps e/w

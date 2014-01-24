@@ -1,0 +1,6 @@
+<?xml version = "1.0"?>
+<Game>
+  <screenWidth>640</screenWidth>
+  <screenHeight>480</screenHeight>
+  <numberOrbs>100</numberOrbs>
+</Game>

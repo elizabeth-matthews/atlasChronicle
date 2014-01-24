@@ -1,0 +1,14 @@
+N=4
+NUM_RULES
+1
+START
+F
+SYMBOL=[=PUSH
+SYMBOL=]=POP
+SYMBOL=X=NULL
+SYMBOL=F=DRAW 5
+SYMBOL=+=TURN -90
+SYMBOL=-=TURN 90
+RULES
+F=(0,1.0)=F+F-F-F+F
+Reference:  http://en.wikipedia.org/wiki/L-system

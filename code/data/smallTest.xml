@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<world>
+   <statistics>
+      <dimensions rigid="false" aspect="none">
+         <width>
+            <min>200</min>
+            <max>300</max>
+         </width>
+         <height>
+            <min>200</min>
+            <max>300</max>
+         </height>
+      </dimensions>
+      
+      <terrain-types>
+         <terrain>
+            <name>grassland</name>
+            <climate>
+               <temperature>0.5</temperature>
+               <humidity>0.5</humidity>
+            </climate>
+            <color>
+               <red>0.15</red>
+               <green>0.78</green>
+               <blue>0.31</blue>
+            </color>
+         </terrain>
+         <terrain>
+            <name>plains</name>
+            <climate>
+               <temperature>0.5</temperature>
+               <humidity>0.2</humidity>
+            </climate>
+            <color>
+               <red>0.59</red>
+               <green>0.59</green>
+               <blue>0.35</blue>
+            </color>
+         </terrain>
+         <terrain>
+            <name>forest</name>
+            <climate>
+               <temperature>0.5</temperature>
+               <humidity>0.8</humidity>
+            </climate>
+            <color>
+               <red>0.0</red>
+               <green>0.23</green>
+               <blue>0.01</blue>
+            </color>
+         </terrain>
+         <terrain>
+            <name>desert</name>
+            <climate>
+               <temperature>0.8</temperature>
+               <humidity>0.5</humidity>
+            </climate>
+            <color>
+               <red>1.0</red>
+               <green>1.0</green>
+               <blue>0.4</blue>
+            </color>
+         </terrain>
+         <terrain>
+            <name>snow</name>
+            <climate>
+               <temperature>0.2</temperature>
+               <humidity>0.5</humidity>
+            </climate>
+            <color>
+               <red>0.75</red>
+               <green>0.75</green>
+               <blue>1.0</blue>
+            </color>
+         </terrain>
+      </terrain-types>
+
+      <climate>
+         <temperature>0.5</temperature>
+         <humidity>0.5</humidity>
+      </climate>
+   </statistics>
+
+   <nodes>
+      <continent key="n_continent_0004">
+         <!-- Triangle Islandfill -->
+         <statistics>
+            <dimensions rigid="false" aspect="none">
+               <width>
+                  <min>60</min>
+                  <max>70</max>
+               </width>
+               <height>
+                  <min>60</min>
+                  <max>70</max>
+               </height>
+            </dimensions>
+         </statistics>
+         
+         <nodes>
+            <field key="n_field_0013">
+               <!-- Only one field -->
+               <statistics>
+                  <dimensions rigid="false" aspect="none">
+                     <width>
+                        <min>50</min>
+                        <max>100</max>
+                     </width>
+                     <height>
+                        <min>50</min>
+                        <max>60</max>
+                     </height>
+                  </dimensions>
+               </statistics>
+               
+               <nodes>
+                  <poi key="n_poi_0047">
+                     <name>Mountains</name>
+                     <terrain>mountain</terrain>
+                  </poi>
+                  <poi key="n_poi_0048">
+                     <name>Forest</name>
+                     <climate>
+                        <temperature>0.5</temperature>
+                        <humidity>0.7</humidity>
+                     </climate>
+                  </poi>
+               </nodes>
+               
+               <restrictions>
+                  <r key="r_poi_0040">
+                     <typed>false</typed>
+                     <first>n_poi_0047</first>
+                     <second>n_poi_0048</second>
+                     <dimensions>
+                        <min>10</min>
+                        <max>30</max>
+                     </dimensions>
+                     <sections>5</sections>
+                  </r>
+               </restrictions>
+               
+            </field>
+         </nodes>      
+      </continent>      
+   </nodes>   
+</world>

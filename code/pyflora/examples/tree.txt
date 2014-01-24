@@ -1,0 +1,15 @@
+N=7
+NUM_RULES
+2
+START
+X
+SYMBOL=[=PUSH
+SYMBOL=]=POP
+SYMBOL=X=NULL
+SYMBOL=F=DRAW 1
+SYMBOL=+=TURN -25.7
+SYMBOL=-=TURN 25.7
+RULES
+X=(0,1.0)=F[+X][-X]FX
+F=(0,1.0)=FF
+Reference:  abop p. 25 example e

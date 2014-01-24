@@ -1,0 +1,134 @@
+{
+   "nodes": {
+      "n_continent_0004": {
+         "dimensions": {
+            "aspect": "none", 
+            "height": {
+               "max": 70, 
+               "min": 60
+            }, 
+            "rigid": false, 
+            "width": {
+               "max": 70, 
+               "min": 60
+            }
+         }, 
+         "nodes": {
+            "n_field_0013": {
+               "dimensions": {
+                  "aspect": "none", 
+                  "height": {
+                     "max": 60, 
+                     "min": 50
+                  }, 
+                  "rigid": false, 
+                  "width": {
+                     "max": 100, 
+                     "min": 50
+                  }
+               }, 
+               "nodes": {
+                  "n_poi_0047": {
+                     "name": "Mountains", 
+                     "terrain": "mountain"
+                  }, 
+                  "n_poi_0048": {
+                     "climate": {
+                        "humidity": 0.7, 
+                        "temperature": 0.5
+                     }, 
+                     "name": "Forest"
+                  }
+               }, 
+               "restrictions": {
+                  "r_poi_0040": {
+                     "dimensions": {
+                        "max": 30, 
+                        "min": 10
+                     }, 
+                     "first": "n_poi_0047", 
+                     "second": "n_poi_0048", 
+                     "sections": 5, 
+                     "typed": false
+                  }
+               }
+            }
+         }
+      }
+   }, 
+   "statistics": {
+      "climate": {
+         "humidity": 0.5, 
+         "temperature": 0.5
+      }, 
+      "dimensions": {
+         "aspect": "none", 
+         "height": {
+            "max": 300, 
+            "min": 200
+         }, 
+         "rigid": false, 
+         "width": {
+            "max": 300, 
+            "min": 200
+         }
+      }, 
+      "terrain-types": {
+         "desert": {
+            "climate": {
+               "humidity": 0.5, 
+               "temperature": 0.8
+            }, 
+            "color": {
+               "blue": 0.4, 
+               "green": 1.0, 
+               "red": 1.0
+            }
+         }, 
+         "forest": {
+            "climate": {
+               "humidity": 0.8, 
+               "temperature": 0.5
+            }, 
+            "color": {
+               "blue": 0.01, 
+               "green": 0.23, 
+               "red": 0.0
+            }
+         }, 
+         "grassland": {
+            "climate": {
+               "humidity": 0.5, 
+               "temperature": 0.5
+            }, 
+            "color": {
+               "blue": 0.31, 
+               "green": 0.78, 
+               "red": 0.15
+            }
+         }, 
+         "plains": {
+            "climate": {
+               "humidity": 0.2, 
+               "temperature": 0.5
+            }, 
+            "color": {
+               "blue": 0.35, 
+               "green": 0.59, 
+               "red": 0.59
+            }
+         }, 
+         "snow": {
+            "climate": {
+               "humidity": 0.5, 
+               "temperature": 0.2
+            }, 
+            "color": {
+               "blue": 1.0, 
+               "green": 0.75, 
+               "red": 0.75
+            }
+         }
+      }
+   }
+}
